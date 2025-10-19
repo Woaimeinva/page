@@ -18,10 +18,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
 
+      - name : Navigate to page directory
+        run: cd page
+
       - name: Install dependencies
-        run: |
-          cd page
-          npm install
+        run: npm install
 
       - name: Build
         run: npm run build
